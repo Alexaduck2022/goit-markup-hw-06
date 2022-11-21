@@ -56,12 +56,14 @@
 		</header>
 		<main>
 			<!--Hero-->
+
 			<section class="hero">
 				<h1 class="hero-title">Ефективні рішення для вашого бізнесу</h1>
-				<button type="button" class="hero-btn" data-modal-open>Замовити послугу</button>
+				<button type="button" class="btn" data-modal-open>Замовити послугу</button>
 			</section>
 
 			<!--Особливості (назву скрити)-->
+
 			<section class="section no-pad-bot">
 				<div class="container">
 					<h2 class="visually-hidden">Особливості</h2>
@@ -389,6 +391,7 @@
 			</section>
 
 			<!--Постійні клієнти-->
+
 			<section class="section">
 				<div class="container">
 					<h2 class="customers-title">Постійні клієнти</h2>
@@ -514,16 +517,79 @@
 						</li>
 					</ul>
 				</div>
+				<div class="signup-container">
+					<p class="sign-up">Підпишіться на розсилку</p>
+					<form class="signup-form" name="signup_form">
+						<div class="signup-group">
+							<label class="signup-form-label" for="signup-email"></label>
+							<input class="signup-form-field" type="email" name="signup-email" id="signup-email" placeholder="Email" />
+							<div class="signup-btn-icon">
+								<button class="signup-form-btn btn" type="submit">Підписатися</button>
+								<svg class="signup-form-icon" width="24" height="24">
+									<use href="./image/icons.svg#send"></use>
+								</svg>
+							</div>
+						</div>
+					</form>
+				</div>
 			</div>
 		</footer>
+
 		<!-- Modal window -->
+
 		<div class="backdrop is-hidden" data-modal>
-			<div class="modal">
+			<div class="modal" data-modal-window>
 				<button class="modal-btn" data-modal-close>
 					<svg class="modal-icon" width="11" height="11">
 						<use href="./image/icons.svg#icon-close"></use>
 					</svg>
 				</button>
+				<strong class="modal-label">Залиште свої дані, ми вам передзвонимо</strong>
+				<form class="modal-form" name="modal_form">
+					<div class="modal-form-group" role="group">
+						<label class="modal-form-label" for="user_name">Ім'я</label>
+						<div class="modal-form-wrapper">
+							<input class="modal-form-field" type="text" name="user_name" id="user_name" />
+							<svg class="modal-form-icon" width="18" height="18">
+								<use href="./image/icons.svg#person"></use>
+							</svg>
+						</div>
+
+						<label class="modal-form-label" for="user_phone">Телефон</label>
+						<div class="modal-form-wrapper">
+							<input class="modal-form-field" type="tel" name="user_phone" id="user_phone" />
+							<svg class="modal-form-icon" width="18" height="18">
+								<use href="./image/icons.svg#phone"></use>
+							</svg>
+						</div>
+
+						<label class="modal-form-label" for="user_mail">Пошта</label>
+						<div class="modal-form-wrapper">
+							<input class="modal-form-field" type="email" name="user_mail" id="user_mail" />
+							<svg class="modal-form-icon" width="18" height="18">
+								<use href="./image/icons.svg#email"></use>
+							</svg>
+						</div>
+
+						<label class="modal-form-label" for="modal-form-label" for="user_message">Коментар</label>
+						<textarea
+							class="modal-form-message"
+							name="user_message"
+							id="user_message"
+							rows="8"
+							placeholder="Введіть текст"
+						></textarea>
+					</div>
+
+					<div class="modal-form-agreememt" role="group">
+						<input class="modal-form-checkbox" type="checkbox" name="user_agreememt" id="user_agreememt" />
+						<label class="modal-form-agreememt-desc" for="user_agreememt">
+							Погоджуюся з розсилкою та приймаю
+							<a class="modal-form-agreememt-link" href="">Умови договору</a>
+						</label>
+					</div>
+					<button class="modal-form-btn btn" type="submit">Відправити</button>
+				</form>
 			</div>
 		</div>
 		<script src="./js/header-scroll.js"></script>
